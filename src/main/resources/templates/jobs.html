@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Listings</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Job Listings</a>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-4 text-primary">Available Jobs</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="job-list-container">
+            </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 Job Listings. All rights reserved.</p>
+    </footer>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/jobs.js}"></script>
+</body>
+</html>
+
