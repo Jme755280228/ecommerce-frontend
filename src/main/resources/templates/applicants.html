@@ -2,20 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Job Listings</title>
+    <title>Applicants Dashboard</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" th:href="@{/jobs}">Job Listings</a>
+            <span class="navbar-text ms-auto text-light">Admin Dashboard</span>
         </div>
     </nav>
 
     <main class="container my-5">
-        <h2 class="text-center mb-4 text-primary">All Job Postings</h2>
+        <h2 class="text-center mb-4 text-primary">All Applicants</h2>
         
-        <div id="job-list-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div id="applicants-list-container" class="list-group">
             </div>
 
         <div id="status-message" class="mt-4 text-center"></div>
@@ -26,7 +27,7 @@
     </footer>
 
     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{/js/jobs.js}"></script>
+    <script th:src="@{/js/applicants.js}"></script>
 </body>
 </html>
 

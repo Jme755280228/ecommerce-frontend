@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/jobs}">Job Listings</a>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <div class="card p-4 shadow-sm" id="job-detail-card">
+            <div id="loading" class="text-center text-muted">Loading...</div>
+            <div id="job-content" style="display: none;">
+                <h2 id="job-title" class="card-title text-primary"></h2>
+                <h4 id="job-company" class="card-subtitle mb-2 text-muted"></h4>
+                <p id="job-description" class="card-text mt-4"></p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <small id="job-location" class="text-secondary"></small>
+                    <small id="job-posted-date" class="text-muted"></small>
+                </div>
+                <a th:href="@{/apply}" class="btn btn-success mt-4">Apply for this Job</a>
+            </div>
+            <div id="error-message" class="mt-4 text-danger text-center" style="display: none;">Job not found or an error occurred.</div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 Job Listings. All rights reserved.</p>
+    </footer>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/job_detail.js}"></script>
+</body>
+</html>
+
